@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -10,27 +11,54 @@
         <variable
             name="department"
             type="com.example.databinding.Department" />
+
+        <variable
+            name="employeePresenter"
+            type="com.example.databinding.EmployeePresenter" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <EditText
+            android:id="@+id/setName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"/>
+        <EditText
+            android:id="@+id/setAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="address"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{employeePresenter::add}"
+            android:text="add"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{employeePresenter::clear}"
+            android:text="clear"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text='@{employee.name + "(" + department.name + ")"}' />
+            android:text='@{employee.name + "(" + department.name + ")"}'
+            tools:text="name"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{employee.address}" />
+            android:text="@{employee.address}"
+            tools:text="address"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(employee.salary)}" />
+            android:text="@{String.valueOf(employee.salary)}"
+            tools:text="salary"/>
 
     </LinearLayout>
 

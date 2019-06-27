@@ -7,6 +7,8 @@ public class Department {
         this.name = name;
     }
 
+    public Department(){}
+
     public long id;
 
     public String name;

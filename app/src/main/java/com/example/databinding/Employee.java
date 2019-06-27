@@ -1,5 +1,7 @@
 package com.example.databinding;
 
+import android.view.View;
+
 public class Employee {
 
     public Employee(long id, String name, String address, int salary) {
@@ -9,6 +11,8 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Employee(){}
+
     public long id;
 
     public String name;
@@ -16,4 +20,5 @@ public class Employee {
     public String address;
 
     public int salary;
+
 }
