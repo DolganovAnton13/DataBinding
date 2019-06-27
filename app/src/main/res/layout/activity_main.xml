@@ -7,6 +7,9 @@
             name="employee"
             type="com.example.databinding.Employee" />
 
+        <variable
+            name="department"
+            type="com.example.databinding.Department" />
     </data>
 
     <LinearLayout
@@ -17,7 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{employee.name}" />
+            android:text='@{employee.name + "(" + department.name + ")"}' />
 
         <TextView
             android:layout_width="match_parent"
